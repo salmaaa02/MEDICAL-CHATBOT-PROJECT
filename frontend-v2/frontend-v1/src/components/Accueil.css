@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+.accueil-page {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    color: #004d40;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Container principal centré */
+.accueil-main {
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Grand titre */
+.accueil-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #00796b;
+    text-shadow: 0 0 15px #004d4088;
+    user-select: none;
+}
+
+/* Intro */
+.accueil-intro {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    color: #004d40cc;
+}
+
+/* Bouton */
+.btn-primary {
+    background: #00796b;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px #004d4088;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    user-select: none;
+}
+
+.btn-primary:hover {
+    background: #004d40;
+    box-shadow: 0 8px 25px #00796bcc;
+}
+
+/* Icônes chatbot médical flottantes */
+.chatbot-icon {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    fill: #00796b;
+    stroke: #004d40;
+    stroke-width: 2;
+    filter: drop-shadow(0 0 4px #004d40aa);
+    animation: floatAround 6s ease-in-out infinite;
+    cursor: default;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.4) rotate(15deg);
+    filter: drop-shadow(0 0 12px #00796bff);
+}
+
+/* Animation d'apparition + montée */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation flottante autour */
+@keyframes floatAround {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(10px, -15px) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(15px, 10px) rotate(-5deg);
+    }
+
+    75% {
+        transform: translate(-10px, 15px) rotate(5deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .accueil-title {
+        font-size: 2.8rem;
+    }
+
+    .btn-primary {
+        font-size: 1.1rem;
+        padding: 0.9rem 2.5rem;
+    }
+
+    .chatbot-icon {
+        width: 45px;
+        height: 45px;
+    }
+}

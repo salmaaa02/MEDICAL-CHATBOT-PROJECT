@@ -1,0 +1,83 @@
+[
+  {
+    "nom": "Dr. Omar Tazi",
+    "specialite": "Généraliste",
+    "ville": "Casablanca",
+    "adresse": "789 Boulevard Ziraoui, Casablanca",
+    "telephone": "0522-345678",
+    "maladies_traitees": ["Grippe", "Gastro-entérite", "Fièvre"]
+  },
+  {
+    "nom": "Dr. Samira El Alami",
+    "specialite": "Cardiologue",
+    "ville": "Rabat",
+    "adresse": "12 Avenue Annakhil, Rabat",
+    "telephone": "0537-890123",
+    "maladies_traitees": ["Hypertension", "Angine", "Arythmie"]
+  },
+  {
+    "nom": "Dr. Youssef Bennani",
+    "specialite": "Neurologue",
+    "ville": "Marrakech",
+    "adresse": "45 Rue Ibn Toumert, Marrakech",
+    "telephone": "0524-987654",
+    "maladies_traitees": ["Migraine", "Alzheimer", "Parkinson"]
+  },
+  {
+    "nom": "Dr. Salma Khattabi",
+    "specialite": "Dermatologue",
+    "ville": "Fès",
+    "adresse": "23 Rue des Orangers, Fès",
+    "telephone": "0535-112233",
+    "maladies_traitees": ["Eczéma", "Alopécie", "Allergie"]
+  },
+  {
+    "nom": "Dr. Rachid El Idrissi",
+    "specialite": "Gastro-entérologue",
+    "ville": "Casablanca",
+    "adresse": "99 Rue Socrate, Quartier Maarif, Casablanca",
+    "telephone": "0522-778899",
+    "maladies_traitees": ["Gastro-entérite", "Reflux gastrique", "Nausées"]
+  },
+  {
+    "nom": "Dr. Fatima Zahra Belhaj",
+    "specialite": "Pneumologue",
+    "ville": "Agadir",
+    "adresse": "10 Rue de la Plage, Agadir",
+    "telephone": "0528-445566",
+    "maladies_traitees": ["Asthme", "Tuberculose", "Bronchite chronique"]
+  },
+  {
+    "nom": "Dr. Hicham Ouazzani",
+    "specialite": "Urologue",
+    "ville": "Tanger",
+    "adresse": "7 Rue Al Amal, Tanger",
+    "telephone": "0539-998877",
+    "maladies_traitees": ["Infection urinaire", "Brûlures urinaires"]
+  },
+  {
+    "nom": "Dr. Karima Boutaleb",
+    "specialite": "Psychiatre",
+    "ville": "Meknès",
+    "adresse": "Rue Lalla Amina, Meknès",
+    "telephone": "0535-665544",
+    "maladies_traitees": ["Dépression", "Insomnie", "Trouble anxieux"]
+  },
+  {
+    "nom": "Dr. Anouar El Ghali",
+    "specialite": "Orthopédiste",
+    "ville": "Oujda",
+    "adresse": "Avenue El Maghreb Al Arabi, Oujda",
+    "telephone": "0536-223344",
+    "maladies_traitees": ["Hernie discale", "Douleur au dos"]
+  },
+  {
+    "nom": "Dr. Mouna Idrissi",
+    "specialite": "Endocrinologue",
+    "ville": "Tétouan",
+    "adresse": "16 Rue Bir Anzarane, Tétouan",
+    "telephone": "0539-556677",
+    "maladies_traitees": ["Diabète", "Perte de poids involontaire"]
+  }
+]
+ 

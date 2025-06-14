@@ -1,0 +1,236 @@
+/* Fonts et reset */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e8f0ff, #f6fcff);
+  color: #1d3557;
+  line-height: 1.6;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+  max-width: 650px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow:
+    0 15px 25px rgba(0, 0, 0, 0.07),
+    0 8px 15px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.8s ease-in-out;
+  border: 1px solid #e3e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ajout d’une légère texture */
+.container::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at center, rgba(33, 150, 243, 0.05), transparent 70%);
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+
+/* Titres */
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Entrée des symptômes */
+.input-symptome {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.input-symptome input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-symptome input:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+.input-symptome button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-symptome button:hover {
+  background-color: #1565c0;
+}
+
+/* Liste des symptômes ajoutés */
+.liste-symptomes {
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.symptome-chip {
+  background-color: #1976d2;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  animation: slideIn 0.3s ease;
+}
+
+/* Boutons */
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #26a69a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #1b8073;
+}
+
+/* Questions complémentaires */
+.question-block {
+  margin-bottom: 20px;
+}
+
+.question-block label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #37474f;
+}
+
+.question-block select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #b0bec5;
+  background: #f0f4f8;
+  transition: border-color 0.3s;
+}
+
+.question-block select:focus {
+  border-color: #26a69a;
+  outline: none;
+}
+
+/* Carte médecin */
+.medecin-card {
+  background-color: #e3f2fd;
+  padding: 18px;
+  border-left: 5px solid #2196f3;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.medecin-card h4 {
+  margin-bottom: 8px;
+  color: #0d47a1;
+}
+
+.medecin-card p {
+  margin: 4px 0;
+  color: #37474f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+
+  .input-symptome {
+    flex-direction: column;
+  }
+
+  .input-symptome button {
+    width: 100%;
+  }
+}
