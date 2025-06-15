@@ -18,43 +18,43 @@ function App() {
   const [medecins, setMedecins] = useState([]);
 
   const ajouterSymptome = () => {
-    const s = inputSymptome.trim();
+    const s = inputSymptome.trim().toLowerCase();
     if (s && !symptomesInitiaux.includes(s)) {
       setSymptomesInitiaux([...symptomesInitiaux, s]);
       setInputSymptome("");
     }
   };
 
-  const ajouterEtEnvoyerSymptomes = async (navigate) => {
-    const s = inputSymptome.trim();
-    let nouveauxSymptomes = [...symptomesInitiaux];
-
-    // ajouter localement le dernier symptôme saisi (sans dépendre du setState)
-    if (s && !nouveauxSymptomes.includes(s)) {
-      nouveauxSymptomes.push(s);
-    }
-    console.log("Symptômes envoyés :", nouveauxSymptomes);
-
-    if (nouveauxSymptomes.length < 3) {
+  const envoyerSymptomes = async () => {
+    if (symptomesInitiaux.length < 3) {
       alert("Veuillez saisir au moins 3 symptômes.");
       return;
     }
 
-    // mettre à jour l'état aussi pour la suite du parcours
-    setSymptomesInitiaux(nouveauxSymptomes);
-    setInputSymptome("");
-
     try {
-      const res = await axios.post("http://localhost:5000/analyser", {
-        symptomes: nouveauxSymptomes,
+      const response = await axios.post("http://localhost:5000/analyser", {
+        symptomes: symptomesInitiaux,
       });
-      setMaladiesProbables(res.data.maladies_probables || []);
-      setQuestionsComplementaires(res.data.questions_complementaires || []);
-      setMedecins(res.data.medecin || []);
-      navigate("/questions");
+
+      if (!response.data) {
+        throw new Error("Pas de réponse du serveur");
+      }
+
+      console.log("Réponse du backend:", response.data); // Pour débogage
+
+      setMaladiesProbables(response.data.maladies_probables || []);
+      setQuestionsComplementaires(response.data.questions_complementaires || []);
+
+      if (window.location.pathname !== "/questions") {
+        navigate("/questions");
+      }
     } catch (error) {
-      alert("Erreur lors de la connexion au serveur backend.");
-      console.error(error);
+      console.error("Erreur complète:", {
+        message: error.message,
+        response: error.response?.data,
+        stack: error.stack,
+      });
+      alert(error.response?.data?.message || "Erreur lors de l'analyse des symptômes");
     }
   };
 
@@ -65,24 +65,23 @@ function App() {
     });
   };
 
-  const envoyerDiagnostic = async (navigate) => {
-    let symptomesComplets = [...symptomesInitiaux];
-    for (const [question, reponse] of Object.entries(reponsesQuestions)) {
-      if (reponse === "oui") {
-        symptomesComplets.push(question);
-      }
-    }
-
+  const envoyerDiagnostic = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/diagnostic", {
+      const symptomesComplets = [
+        ...symptomesInitiaux,
+        ...Object.keys(reponsesQuestions).filter((q) => reponsesQuestions[q] === "oui"),
+      ];
+
+      const response = await axios.post("http://localhost:5000/diagnostic", {
         symptomes: symptomesComplets,
       });
-      setDiagnostic(res.data.maladie);
-      setMedecins(res.data.medecin);
+
+      setDiagnostic(response.data.maladie || "Diagnostic non déterminé");
+      setMedecins(response.data.medecin || []);
       navigate("/resultat");
     } catch (error) {
-      alert("Erreur lors de la connexion au serveur backend.");
-      console.error(error);
+      console.error("Erreur:", error.response?.data || error.message);
+      alert("Erreur lors du diagnostic final");
     }
   };
 
@@ -94,6 +93,7 @@ function App() {
     setReponsesQuestions({});
     setDiagnostic(null);
     setMedecins([]);
+    navigate("/symptomes");
   };
 
   return (
@@ -104,25 +104,30 @@ function App() {
         element={
           <Symptomes
             symptomesInitiaux={symptomesInitiaux}
+            setSymptomesInitiaux={setSymptomesInitiaux}
             inputSymptome={inputSymptome}
             setInputSymptome={setInputSymptome}
-            setSymptomesInitiaux={setSymptomesInitiaux}        // <-- Ajouté ici
             ajouterSymptome={ajouterSymptome}
-            envoyerSymptomesInitiaux={ajouterEtEnvoyerSymptomes}
+            envoyerSymptomes={envoyerSymptomes}
+            setMaladiesProbables={setMaladiesProbables}
+            setQuestionsComplementaires={setQuestionsComplementaires} // correction ici
           />
         }
       />
+
       <Route
         path="/questions"
         element={
           <Questions
+            maladiesProbables={maladiesProbables}
             questionsComplementaires={questionsComplementaires}
             reponsesQuestions={reponsesQuestions}
             handleReponseChange={handleReponseChange}
-            envoyerDiagnostic={() => envoyerDiagnostic(navigate)}
+            envoyerDiagnostic={envoyerDiagnostic}
           />
         }
       />
+
       <Route
         path="/resultat"
         element={

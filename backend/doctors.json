@@ -5,7 +5,28 @@
     "ville": "Casablanca",
     "adresse": "789 Boulevard Ziraoui, Casablanca",
     "telephone": "0522-345678",
-    "maladies_traitees": ["Grippe", "Gastro-entérite", "Fièvre"]
+    "maladies_traitees": [
+      "Grippe",
+      "Gastro-entérite",
+      "Fièvre",
+      "Hypertension",
+      "Allergie",
+      "Appendicite"
+    ]
+  },
+  {
+    "nom": "Dr. Amina Bouzid",
+    "specialite": "Généraliste",
+    "ville": "Rabat",
+    "adresse": "55 Avenue Mohammed V, Rabat",
+    "telephone": "0537-224466",
+    "maladies_traitees": [
+      "Grippe",
+      "Fièvre",
+      "Fatigue",
+      "Infections courantes",
+      "Appendicite"
+    ]
   },
   {
     "nom": "Dr. Samira El Alami",
@@ -13,7 +34,24 @@
     "ville": "Rabat",
     "adresse": "12 Avenue Annakhil, Rabat",
     "telephone": "0537-890123",
-    "maladies_traitees": ["Hypertension", "Angine", "Arythmie"]
+    "maladies_traitees": [
+      "Hypertension",
+      "Angine",
+      "Arythmie",
+      "Saignement de nez"
+    ]
+  },
+  {
+    "nom": "Dr. Youssef Hakam",
+    "specialite": "Cardiologue",
+    "ville": "Casablanca",
+    "adresse": "101 Boulevard Anfa, Casablanca",
+    "telephone": "0522-556677",
+    "maladies_traitees": [
+      "Hypertension",
+      "Arythmie",
+      "Insuffisance cardiaque"
+    ]
   },
   {
     "nom": "Dr. Youssef Bennani",
@@ -21,7 +59,24 @@
     "ville": "Marrakech",
     "adresse": "45 Rue Ibn Toumert, Marrakech",
     "telephone": "0524-987654",
-    "maladies_traitees": ["Migraine", "Alzheimer", "Parkinson"]
+    "maladies_traitees": [
+      "Migraine",
+      "Alzheimer",
+      "Parkinson",
+      "Sclérose en plaques"
+    ]
+  },
+  {
+    "nom": "Dr. Nadia El Khatib",
+    "specialite": "Neurologue",
+    "ville": "Fès",
+    "adresse": "10 Rue des Andalous, Fès",
+    "telephone": "0535-334455",
+    "maladies_traitees": [
+      "Migraine",
+      "Épilepsie",
+      "Neuropathie"
+    ]
   },
   {
     "nom": "Dr. Salma Khattabi",
@@ -29,7 +84,24 @@
     "ville": "Fès",
     "adresse": "23 Rue des Orangers, Fès",
     "telephone": "0535-112233",
-    "maladies_traitees": ["Eczéma", "Alopécie", "Allergie"]
+    "maladies_traitees": [
+      "Eczéma",
+      "Alopécie",
+      "Allergie",
+      "Démangeaisons"
+    ]
+  },
+  {
+    "nom": "Dr. Samia El Idrissi",
+    "specialite": "Dermatologue",
+    "ville": "Marrakech",
+    "adresse": "9 Rue de la Kasbah, Marrakech",
+    "telephone": "0524-778899",
+    "maladies_traitees": [
+      "Psoriasis",
+      "Acné",
+      "Urticaire"
+    ]
   },
   {
     "nom": "Dr. Rachid El Idrissi",
@@ -37,7 +109,24 @@
     "ville": "Casablanca",
     "adresse": "99 Rue Socrate, Quartier Maarif, Casablanca",
     "telephone": "0522-778899",
-    "maladies_traitees": ["Gastro-entérite", "Reflux gastrique", "Nausées"]
+    "maladies_traitees": [
+      "Gastro-entérite",
+      "Reflux gastrique",
+      "Nausées",
+      "Vomissements"
+    ]
+  },
+  {
+    "nom": "Dr. Khalid Benjelloun",
+    "specialite": "Gastro-entérologue",
+    "ville": "Rabat",
+    "adresse": "32 Avenue Hassan II, Rabat",
+    "telephone": "0537-667788",
+    "maladies_traitees": [
+      "Ulcère gastrique",
+      "Reflux gastrique",
+      "Hépatite"
+    ]
   },
   {
     "nom": "Dr. Fatima Zahra Belhaj",
@@ -45,7 +134,24 @@
     "ville": "Agadir",
     "adresse": "10 Rue de la Plage, Agadir",
     "telephone": "0528-445566",
-    "maladies_traitees": ["Asthme", "Tuberculose", "Bronchite chronique"]
+    "maladies_traitees": [
+      "Asthme",
+      "Tuberculose",
+      "Bronchite chronique",
+      "Toux chronique"
+    ]
+  },
+  {
+    "nom": "Dr. Abdelilah Souidi",
+    "specialite": "Pneumologue",
+    "ville": "Casablanca",
+    "adresse": "15 Rue d'Anfa, Casablanca",
+    "telephone": "0522-123456",
+    "maladies_traitees": [
+      "Pneumonie",
+      "Asthme",
+      "Emphysème"
+    ]
   },
   {
     "nom": "Dr. Hicham Ouazzani",
@@ -53,7 +159,22 @@
     "ville": "Tanger",
     "adresse": "7 Rue Al Amal, Tanger",
     "telephone": "0539-998877",
-    "maladies_traitees": ["Infection urinaire", "Brûlures urinaires"]
+    "maladies_traitees": [
+      "Infection urinaire",
+      "Brûlures urinaires",
+      "Sang dans les urines"
+    ]
+  },
+  {
+    "nom": "Dr. Sara El Amrani",
+    "specialite": "Urologue",
+    "ville": "Rabat",
+    "adresse": "22 Boulevard Mohammed V, Rabat",
+    "telephone": "0537-223344",
+    "maladies_traitees": [
+      "Calculs rénaux",
+      "Infections urinaires"
+    ]
   },
   {
     "nom": "Dr. Karima Boutaleb",
@@ -61,7 +182,24 @@
     "ville": "Meknès",
     "adresse": "Rue Lalla Amina, Meknès",
     "telephone": "0535-665544",
-    "maladies_traitees": ["Dépression", "Insomnie", "Trouble anxieux"]
+    "maladies_traitees": [
+      "Dépression",
+      "Insomnie",
+      "Trouble anxieux",
+      "Tristesse prolongée"
+    ]
+  },
+  {
+    "nom": "Dr. Yassine Fassi",
+    "specialite": "Psychiatre",
+    "ville": "Casablanca",
+    "adresse": "88 Rue Mohammed V, Casablanca",
+    "telephone": "0522-556677",
+    "maladies_traitees": [
+      "Dépression",
+      "Stress post-traumatique",
+      "Troubles bipolaires"
+    ]
   },
   {
     "nom": "Dr. Anouar El Ghali",
@@ -69,7 +207,24 @@
     "ville": "Oujda",
     "adresse": "Avenue El Maghreb Al Arabi, Oujda",
     "telephone": "0536-223344",
-    "maladies_traitees": ["Hernie discale", "Douleur au dos"]
+    "maladies_traitees": [
+      "Hernie discale",
+      "Douleur au dos",
+      "Douleur irradiant dans la jambe",
+      "Engourdissement"
+    ]
+  },
+  {
+    "nom": "Dr. Latifa Marzouki",
+    "specialite": "Orthopédiste",
+    "ville": "Rabat",
+    "adresse": "14 Rue Abdelkrim El Khattabi, Rabat",
+    "telephone": "0537-778899",
+    "maladies_traitees": [
+      "Fractures",
+      "Douleurs articulaires",
+      "Tendinites"
+    ]
   },
   {
     "nom": "Dr. Mouna Idrissi",
@@ -77,7 +232,97 @@
     "ville": "Tétouan",
     "adresse": "16 Rue Bir Anzarane, Tétouan",
     "telephone": "0539-556677",
-    "maladies_traitees": ["Diabète", "Perte de poids involontaire"]
+    "maladies_traitees": [
+      "Diabète",
+      "Perte de poids involontaire",
+      "Soif excessive"
+    ]
+  },
+  {
+    "nom": "Dr. Hassan Benjelloun",
+    "specialite": "Endocrinologue",
+    "ville": "Casablanca",
+    "adresse": "33 Rue Ibn Rochd, Casablanca",
+    "telephone": "0522-445566",
+    "maladies_traitees": [
+      "Hypothyroïdie",
+      "Diabète",
+      "Troubles hormonaux"
+    ]
+  },
+  {
+    "nom": "Dr. Mehdi El Fassi",
+    "specialite": "Rhumatologue",
+    "ville": "Casablanca",
+    "adresse": "120 Boulevard Moulay Youssef, Casablanca",
+    "telephone": "0522-334455",
+    "maladies_traitees": [
+      "Arthrose",
+      "Douleurs articulaires",
+      "Raideur matinale",
+      "Gonflement des articulations"
+    ]
+  },
+  {
+    "nom": "Dr. Samir El Mansouri",
+    "specialite": "Rhumatologue",
+    "ville": "Fès",
+    "adresse": "27 Rue Talaa Kebira, Fès",
+    "telephone": "0535-998877",
+    "maladies_traitees": [
+      "Polyarthrite rhumatoïde",
+      "Arthrite",
+      "Lupus"
+    ]
+  },
+  {
+    "nom": "Dr. Najwa El Idrissi",
+    "specialite": "Angiologue",
+    "ville": "Rabat",
+    "adresse": "78 Rue Moulay Ismail, Rabat",
+    "telephone": "0537-556677",
+    "maladies_traitees": [
+      "Thrombose",
+      "Douleur à la jambe",
+      "Rougeur",
+      "Chaleur localisée"
+    ]
+  },
+  {
+    "nom": "Dr. Rachid Ziani",
+    "specialite": "Angiologue",
+    "ville": "Marrakech",
+    "adresse": "11 Rue des Banques, Marrakech",
+    "telephone": "0524-667788",
+    "maladies_traitees": [
+      "Varices",
+      "Insuffisance veineuse",
+      "Thrombose"
+    ]
+  },
+  {
+    "nom": "Dr. Leila Bahmad",
+    "specialite": "Ophtalmologue",
+    "ville": "Fès",
+    "adresse": "44 Rue des Tanneurs, Fès",
+    "telephone": "0535-778899",
+    "maladies_traitees": [
+      "Hypertension",
+      "Vision floue",
+      "Maux de tête",
+      "Vertiges"
+    ]
+  },
+  {
+    "nom": "Dr. Souad Benkirane",
+    "specialite": "Ophtalmologue",
+    "ville": "Casablanca",
+    "adresse": "66 Avenue Hassan II, Casablanca",
+    "telephone": "0522-667788",
+    "maladies_traitees": [
+      "Glaucome",
+      "Cataracte",
+      "Vision trouble"
+    ]
   }
 ]
- 

@@ -1,37 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Symptomes({
     symptomesInitiaux,
     setSymptomesInitiaux,
-    setMaladiesProbables,
-    setQuestions,
+    inputSymptome,
+    setInputSymptome,
+    setMaladiesProbables = () => { },
+    setQuestionsComplementaires = () => { },
 }) {
-    const [nouveauSymptome, setNouveauSymptome] = useState("");
     const navigate = useNavigate();
 
     const ajouterSymptome = () => {
-        const symp = nouveauSymptome.trim().toLowerCase();
-        if (symp && symptomesInitiaux && !symptomesInitiaux.includes(symp)) {
-            if (typeof setSymptomesInitiaux === "function") {
-                setSymptomesInitiaux([...symptomesInitiaux, symp]);
-                setNouveauSymptome("");
-            } else {
-                console.warn("setSymptomesInitiaux n'est pas défini !");
-            }
+        const symp = inputSymptome.trim().toLowerCase();
+        if (symp && !symptomesInitiaux.includes(symp)) {
+            setSymptomesInitiaux([...symptomesInitiaux, symp]);
+            setInputSymptome("");
         }
     };
 
     const supprimerSymptome = (symptome) => {
-        if (typeof setSymptomesInitiaux === "function") {
-            setSymptomesInitiaux(symptomesInitiaux.filter((s) => s !== symptome));
-        } else {
-            console.warn("setSymptomesInitiaux n'est pas défini !");
-        }
+        setSymptomesInitiaux(symptomesInitiaux.filter((s) => s !== symptome));
     };
 
-
     const envoyerSymptomes = async () => {
+        console.log("envoyerSymptomes appelée");
         if (symptomesInitiaux.length < 3) {
             alert("Veuillez saisir au moins 3 symptômes.");
             return;
@@ -43,13 +36,20 @@ function Symptomes({
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ symptomes: symptomesInitiaux }),
             });
+
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP: ${response.status}`);
+            }
+
             const data = await response.json();
+
             setMaladiesProbables(data.maladies_probables || []);
-            setQuestions(data.questions_complementaires || []);
+            setQuestionsComplementaires(data.questions_complementaires || []);
+
             navigate("/questions");
         } catch (error) {
-            console.error("Erreur lors de l'envoi des symptômes :", error);
-            alert("Erreur lors de la connexion au serveur backend.");
+            console.error("Erreur lors de l'envoi des symptômes:", error);
+            alert("Erreur lors de la communication avec le serveur");
         }
     };
 
@@ -60,21 +60,18 @@ function Symptomes({
                     Saisie des symptômes
                 </h2>
 
-                <p className="accueil-intro" style={{ fontSize: "1.2rem", marginBottom: "2rem", color: "#004d40cc" }}>
+                <p
+                    className="accueil-intro"
+                    style={{ fontSize: "1.2rem", marginBottom: "2rem", color: "#004d40cc" }}
+                >
                     Entrez vos symptômes un par un puis cliquez sur Ajouter.
                 </p>
 
-                <div
-                    style={{
-                        display: "flex",
-                        gap: "12px",
-                        marginBottom: "2rem",
-                    }}
-                >
+                <div style={{ display: "flex", gap: "12px", marginBottom: "2rem" }}>
                     <input
                         type="text"
-                        value={nouveauSymptome}
-                        onChange={(e) => setNouveauSymptome(e.target.value)}
+                        value={inputSymptome}
+                        onChange={(e) => setInputSymptome(e.target.value)}
                         placeholder="Ex : fièvre"
                         style={{
                             flex: 1,
@@ -86,7 +83,10 @@ function Symptomes({
                             transition: "border-color 0.3s",
                         }}
                         onKeyDown={(e) => {
-                            if (e.key === "Enter") ajouterSymptome();
+                            if (e.key === "Enter") {
+                                e.preventDefault();
+                                ajouterSymptome();
+                            }
                         }}
                     />
                     <button

@@ -1,31 +1,386 @@
- 
 {
-  "fièvre": ["Grippe", "Généraliste"],
-  "toux": ["Grippe", "Généraliste"],
-  "maux de tête": ["Migraine", "Neurologue"],
-  "douleur thoracique": ["Angine", "Cardiologue"],
-  "fatigue extrême": ["Anémie", "Hématologue"],
-  "éruption cutanée": ["Allergie", "Dermatologue"],
-  "perte de mémoire": ["Alzheimer", "Neurologue"],
-  "essoufflement": ["Asthme", "Pneumologue"],
-  "vision floue": ["Hypertension", "Ophtalmologue"],
-  "douleurs articulaires": ["Arthrose", "Rhumatologue"],
-  "douleurs abdominales": ["Appendicite", "Chirurgien"],
-  "sang dans les urines": ["Infection urinaire", "Urologue"],
-  "vomissements": ["Gastro-entérite", "Gastro-entérologue"],
-  "nausées": ["Gastro-entérite", "Gastro-entérologue"],
-  "saignement de nez": ["Hypertension", "Cardiologue"],
-  "perte de poids involontaire": ["Diabète", "Endocrinologue"],
-  "tremblements": ["Parkinson", "Neurologue"],
-  "douleur à la jambe": ["Thrombose", "Angiologue"],
-  "démangeaisons": ["Eczéma", "Dermatologue"],
-  "chute de cheveux": ["Alopécie", "Dermatologue"],
-  "brûlures urinaires": ["Infection urinaire", "Urologue"],
-  "sensation de vertige": ["Hypotension", "Généraliste"],
-  "palpitations": ["Arythmie", "Cardiologue"],
-  "tristesse prolongée": ["Dépression", "Psychiatre"],
-  "troubles du sommeil": ["Insomnie", "Psychiatre"],
-  "engourdissements": ["Sclérose en plaques", "Neurologue"],
-  "toux chronique": ["Bronchite chronique", "Pneumologue"],
-  "douleur au dos": ["Hernie discale", "Orthopédiste"]
+  "fièvre": [
+    "Grippe",
+    "Généraliste"
+  ],
+  "toux": [
+    "Grippe",
+    "Généraliste"
+  ],
+  "frissons": [
+    "Grippe",
+    "Généraliste"
+  ],
+  "fatigue": [
+    "Grippe",
+    "Généraliste"
+  ],
+  "maux de tête": [
+    "Migraine",
+    "Neurologue"
+  ],
+  "sensibilité à la lumière": [
+    "Migraine",
+    "Neurologue"
+  ],
+  "nausées": [
+    "Migraine",
+    "Neurologue"
+  ],
+  "vomissements": [
+    "Migraine",
+    "Neurologue"
+  ],
+  "douleur thoracique": [
+    "Angine",
+    "Cardiologue"
+  ],
+  "essoufflement": [
+    "Angine",
+    "Cardiologue"
+  ],
+  "palpitations": [
+    "Angine",
+    "Cardiologue"
+  ],
+  "sueurs froides": [
+    "Angine",
+    "Cardiologue"
+  ],
+  "fatigue extrême": [
+    "Anémie",
+    "Hématologue"
+  ],
+  "pâleur": [
+    "Anémie",
+    "Hématologue"
+  ],
+  "essoufflement": [
+    "Anémie",
+    "Hématologue"
+  ],
+  "palpitations": [
+    "Anémie",
+    "Hématologue"
+  ],
+  "éruption cutanée": [
+    "Allergie",
+    "Dermatologue"
+  ],
+  "démangeaisons": [
+    "Allergie",
+    "Dermatologue"
+  ],
+  "gonflement": [
+    "Allergie",
+    "Dermatologue"
+  ],
+  "rougeur": [
+    "Allergie",
+    "Dermatologue"
+  ],
+  "perte de mémoire": [
+    "Alzheimer",
+    "Neurologue"
+  ],
+  "confusion": [
+    "Alzheimer",
+    "Neurologue"
+  ],
+  "désorientation": [
+    "Alzheimer",
+    "Neurologue"
+  ],
+  "changement de personnalité": [
+    "Alzheimer",
+    "Neurologue"
+  ],
+  "essoufflement": [
+    "Asthme",
+    "Pneumologue"
+  ],
+  "sifflements respiratoires": [
+    "Asthme",
+    "Pneumologue"
+  ],
+  "toux chronique": [
+    "Asthme",
+    "Pneumologue"
+  ],
+  "oppression thoracique": [
+    "Asthme",
+    "Pneumologue"
+  ],
+  "vision floue": [
+    "Hypertension",
+    "Ophtalmologue"
+  ],
+  "maux de tête": [
+    "Hypertension",
+    "Cardiologue"
+  ],
+  "saignement de nez": [
+    "Hypertension",
+    "Cardiologue"
+  ],
+  "vertiges": [
+    "Hypertension",
+    "Cardiologue"
+  ],
+  "douleurs articulaires": [
+    "Arthrose",
+    "Rhumatologue"
+  ],
+  "raideur matinale": [
+    "Arthrose",
+    "Rhumatologue"
+  ],
+  "gonflement des articulations": [
+    "Arthrose",
+    "Rhumatologue"
+  ],
+  "difficulté à bouger": [
+    "Arthrose",
+    "Rhumatologue"
+  ],
+  "douleurs abdominales": [
+    "Appendicite",
+    "Chirurgien"
+  ],
+  "fièvre": [
+    "Appendicite",
+    "Chirurgien"
+  ],
+  "nausées": [
+    "Appendicite",
+    "Chirurgien"
+  ],
+  "perte d'appétit": [
+    "Appendicite",
+    "Chirurgien"
+  ],
+  "sang dans les urines": [
+    "Infection urinaire",
+    "Urologue"
+  ],
+  "brûlures urinaires": [
+    "Infection urinaire",
+    "Urologue"
+  ],
+  "besoin fréquent d'uriner": [
+    "Infection urinaire",
+    "Urologue"
+  ],
+  "douleur pelvienne": [
+    "Infection urinaire",
+    "Urologue"
+  ],
+  "vomissements": [
+    "Gastro-entérite",
+    "Gastro-entérologue"
+  ],
+  "nausées": [
+    "Gastro-entérite",
+    "Gastro-entérologue"
+  ],
+  "diarrhée": [
+    "Gastro-entérite",
+    "Gastro-entérologue"
+  ],
+  "douleurs abdominales": [
+    "Gastro-entérite",
+    "Gastro-entérologue"
+  ],
+  "perte de poids involontaire": [
+    "Diabète",
+    "Endocrinologue"
+  ],
+  "soif excessive": [
+    "Diabète",
+    "Endocrinologue"
+  ],
+  "mictions fréquentes": [
+    "Diabète",
+    "Endocrinologue"
+  ],
+  "fatigue": [
+    "Diabète",
+    "Endocrinologue"
+  ],
+  "tremblements": [
+    "Parkinson",
+    "Neurologue"
+  ],
+  "raideur musculaire": [
+    "Parkinson",
+    "Neurologue"
+  ],
+  "lenteur des mouvements": [
+    "Parkinson",
+    "Neurologue"
+  ],
+  "troubles de l'équilibre": [
+    "Parkinson",
+    "Neurologue"
+  ],
+  "douleur à la jambe": [
+    "Thrombose",
+    "Angiologue"
+  ],
+  "gonflement": [
+    "Thrombose",
+    "Angiologue"
+  ],
+  "rougeur": [
+    "Thrombose",
+    "Angiologue"
+  ],
+  "chaleur localisée": [
+    "Thrombose",
+    "Angiologue"
+  ],
+  "démangeaisons": [
+    "Eczéma",
+    "Dermatologue"
+  ],
+  "rougeur": [
+    "Eczéma",
+    "Dermatologue"
+  ],
+  "peau sèche": [
+    "Eczéma",
+    "Dermatologue"
+  ],
+  "cloque": [
+    "Eczéma",
+    "Dermatologue"
+  ],
+  "chute de cheveux": [
+    "Alopécie",
+    "Dermatologue"
+  ],
+  "zone chauve": [
+    "Alopécie",
+    "Dermatologue"
+  ],
+  "pellicules": [
+    "Alopécie",
+    "Dermatologue"
+  ],
+  "démangeaisons du cuir chevelu": [
+    "Alopécie",
+    "Dermatologue"
+  ],
+  "sensation de vertige": [
+    "Hypotension",
+    "Généraliste"
+  ],
+  "fatigue": [
+    "Hypotension",
+    "Généraliste"
+  ],
+  "évanouissement": [
+    "Hypotension",
+    "Généraliste"
+  ],
+  "vision trouble": [
+    "Hypotension",
+    "Généraliste"
+  ],
+  "palpitations": [
+    "Arythmie",
+    "Cardiologue"
+  ],
+  "essoufflement": [
+    "Arythmie",
+    "Cardiologue"
+  ],
+  "fatigue": [
+    "Arythmie",
+    "Cardiologue"
+  ],
+  "étourdissements": [
+    "Arythmie",
+    "Cardiologue"
+  ],
+  "tristesse prolongée": [
+    "Dépression",
+    "Psychiatre"
+  ],
+  "perte d'intérêt": [
+    "Dépression",
+    "Psychiatre"
+  ],
+  "fatigue": [
+    "Dépression",
+    "Psychiatre"
+  ],
+  "troubles du sommeil": [
+    "Dépression",
+    "Psychiatre"
+  ],
+  "troubles du sommeil": [
+    "Insomnie",
+    "Psychiatre"
+  ],
+  "fatigue": [
+    "Insomnie",
+    "Psychiatre"
+  ],
+  "irritabilité": [
+    "Insomnie",
+    "Psychiatre"
+  ],
+  "difficulté de concentration": [
+    "Insomnie",
+    "Psychiatre"
+  ],
+  "engourdissements": [
+    "Sclérose en plaques",
+    "Neurologue"
+  ],
+  "faiblesse musculaire": [
+    "Sclérose en plaques",
+    "Neurologue"
+  ],
+  "troubles de la vision": [
+    "Sclérose en plaques",
+    "Neurologue"
+  ],
+  "troubles de l'équilibre": [
+    "Sclérose en plaques",
+    "Neurologue"
+  ],
+  "toux chronique": [
+    "Bronchite chronique",
+    "Pneumologue"
+  ],
+  "production de mucus": [
+    "Bronchite chronique",
+    "Pneumologue"
+  ],
+  "essoufflement": [
+    "Bronchite chronique",
+    "Pneumologue"
+  ],
+  "oppression thoracique": [
+    "Bronchite chronique",
+    "Pneumologue"
+  ],
+  "douleur au dos": [
+    "Hernie discale",
+    "Orthopédiste"
+  ],
+  "engourdissement": [
+    "Hernie discale",
+    "Orthopédiste"
+  ],
+  "faiblesse musculaire": [
+    "Hernie discale",
+    "Orthopédiste"
+  ],
+  "douleur irradiant dans la jambe": [
+    "Hernie discale",
+    "Orthopédiste"
+  ]
 }

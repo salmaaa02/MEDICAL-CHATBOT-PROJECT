@@ -13,7 +13,12 @@ def accueil():
 def analyser():
     data = request.get_json()
     symptomes_initiaux = data.get('symptomes', [])
-    maladies_probables, questions = analyser_symptomes_initiaux(symptomes_initiaux)
+    
+    # Correction ici : on récupère le dict et on extrait les champs
+    resultat_analyse = analyser_symptomes_initiaux(symptomes_initiaux)
+    maladies_probables = resultat_analyse["maladies_probables"]
+    questions = resultat_analyse["questions_complementaires"]
+    
     return jsonify({
         "maladies_probables": maladies_probables,
         "questions_complementaires": questions
